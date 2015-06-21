@@ -1,3 +1,9 @@
+## The following functions are an implementation of the example for this assignment
+## Example of use
+## ma <-  rbind(c(1, -1/4), c(-1/4, 1)) 
+## v1 <- makeCacheMatrix(ma)
+## cacheSolve(v1)
+
 makeCacheMatrix <- function(x = matrix()) {
   ## This function returns an object that stores a matrix and his inverse
   m <- NULL
@@ -17,7 +23,6 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   ## x is an object created by makeCacheMatrix function
-  ## The methods set and setinverse should be set befor cacheSolve can be used
   m <- x$getinverse()
   if(!is.null(m)) {
     message("getting cached data")
